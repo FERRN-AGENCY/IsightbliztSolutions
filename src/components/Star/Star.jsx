@@ -27,7 +27,7 @@ const Star = () => {
       </div>
 
       {/* Twinkling Stars */}
-      {stars.map((star, i) => (
+      {/* {stars.map((star, i) => (
         <div
           key={`star-${i}`}
           className="star"
@@ -39,24 +39,9 @@ const Star = () => {
             animationDelay: `${star.delay}s`
           }}
         />
-      ))}
+      ))} */}
 
-      {/* Shooting Stars */}
-      {shootingStars.map((shooting, i) => (
-        <div
-          key={`shooting-${i}`}
-          className="shooting-star"
-          style={{
-            top: shooting.top,
-            left: shooting.left,
-            animationDuration: `${shooting.duration}s`,
-            animationDelay: `${shooting.delay}s`
-          }}
-        >
-          <div className="shooting-star-head"></div>
-          <div className="shooting-star-tail"></div>
-        </div>
-      ))}
+      
     </div>
   );
 };

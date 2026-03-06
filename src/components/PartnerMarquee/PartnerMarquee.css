@@ -57,7 +57,7 @@
 }
 
 .logo-image {
-  height: 60px;
+  height: 90px;
   width: auto;
   flex-shrink: 0;
   /* Darkened base state to match your screenshot */
@@ -66,8 +66,11 @@
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 @media (max-width: 456px) {
+    .partner-bottom{
+      gap: 20px;
+    }
     .logo-image {
-        height: 40px;   
+        height: 70px;   
     }
 }
 
