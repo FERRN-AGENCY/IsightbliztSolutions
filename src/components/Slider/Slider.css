@@ -18,7 +18,8 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 0px;
+    gap: 0px;
   }
 }
 .stat-card {
@@ -130,7 +131,7 @@
 .stat-card p{
     font-weight: 400;
     font-size: 24px;
-    color: #155907;
+    color: #243223;
     font-weight: 500;
 }
 @media (max-width:1025px) {

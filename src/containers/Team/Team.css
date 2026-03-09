@@ -50,7 +50,7 @@
 
 /* Bright green border for active state */
 .member-wrapper.active .member-image-wrap {
-  border-color: #00FF00; /* Adjust to your specific neon green hex if needed */
+  border-color: var(--white-color); /* Adjust to your specific neon green hex if needed */
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.05);
 }
 
@@ -143,7 +143,7 @@
   font-weight: 600;
   margin: 0;
   letter-spacing: -0.5px;
-  color: #00FF00; /* Neon green to match the image */
+  color: var(--white-color); /* Neon green to match the image */
 }
 
 .spotlight-text p {
@@ -212,7 +212,7 @@
   .dot.active {
     width: 24px;
     border-radius: 10px;
-    background: #00FF00;
+    background: var(--white-color);
   }
 
   .team-layout {

@@ -27,7 +27,7 @@
   position: absolute;
   border-radius: 50%;
   /* Deep, glowing green that fades smoothly to transparent */
-  background: radial-gradient(circle, rgba(0, 255, 0, 0.15) 60%, rgba(0, 255, 0, 0) 90%);
+  background: radial-gradient(circle, #2C492B 30%, rgba(0, 255, 0, 0) 90%);
 }
 
 /* Left Cloud */

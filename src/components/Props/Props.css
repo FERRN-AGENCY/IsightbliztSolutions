@@ -9,20 +9,22 @@
     z-index: 0;
 }
 #AboutUs{
-    height: 35vh;
+    height: 45vh;
     padding-top: 0%;
 }
 #Partners, #Services, #FAQ, #CaseStudies, #Team {
-    height: 38vh;
+    height: 50vh;
     padding-top: 0%;
 }
 @media (max-width: 769px) {
     .app__props {
-        height: 82vh;
+        height: 69vh;
         padding: 3rem 0;
+        justify-content: end;
+
     }
-    #AboutUs, #Partners{
-        height: 32vh;
+    #AboutUs{
+        height: 42vh;
         margin-top: 4rem;
     }
 }
@@ -131,8 +133,8 @@
     border: 0.5px solid #3E3E3E;
     box-shadow: 
         0 0 40px rgba(47, 251, 4, 0.4),
-        0 0 120px rgba(47, 251, 4, 0.6),
-        inset 0 0 15px rgba(47, 251, 4, 0.9);
+        0 0 120px var(--white-color),
+        inset 0 0 15px var(--white-color);
     border-radius: 8px;
     cursor: pointer;
     transition: 
@@ -172,9 +174,10 @@
         width: 0.5rem;
         height: 0.5rem;
         margin-right: 2px;
+
     }
     #Partners, #Services, #FAQ, #CaseStudies, #Team {
-        height: fit-content;
+        height: 50vh;
         padding-top: 5%;
     }
 }
