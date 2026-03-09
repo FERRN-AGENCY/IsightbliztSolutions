@@ -1,11 +1,9 @@
 import React, { forwardRef } from 'react';
 import { projectData } from './ProjectData';
 import './ProjectCard.css';
-import {images} from './../../constants'
+import { images } from './../../constants';
 
 const ProjectCard = forwardRef(({ activeIndex, onScroll }, ref) => {
-  // Log the current active index from the parent
-
   return (
     <div className="project-slider-container">
       <div className="project-grid" ref={ref} onScroll={onScroll}>
@@ -22,8 +20,18 @@ const ProjectCard = forwardRef(({ activeIndex, onScroll }, ref) => {
                 <div className="card-header">
                   <h3 className="card-title">{project.title}</h3>
                   <div className="card-socials">
-                    <div className="social-box"><img src={images.globe} alt="" srcset="" /></div>
-                    <div className="social-box"><img src={images.twitter} alt="" srcset="" /></div>
+                    <div className="social-box">
+                      <img src={images.globe} alt="Website" />
+                    </div>
+                    {/* Twitter Icon now links to project.link */}
+                    <a 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="social-box"
+                    >
+                      <img src={images.twitter} alt="Twitter" />
+                    </a>
                   </div>
                 </div>
                 <p className="card-description">{project.description}</p>
@@ -36,15 +44,28 @@ const ProjectCard = forwardRef(({ activeIndex, onScroll }, ref) => {
                   ))}
                 </div>
                 
-                {/* Applying classes based on isActive. 
-                  Check the console to see if 'active-cta' is being applied 
-                */}
+                {/* "See More" Link - Moved ABOVE the button */}
+                <div className="see-more-container">
+                  <a 
+                    href="https://www.notion.so/AVALANCHEXBT-2fb2efe8d2858030a7f2e8c3e28ced11" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="see-more-link"
+                  >
+                    See More
+                  </a>
+                </div>
+
+                {/* Main CTA Button */}
                 <a 
                   href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className={`card-cta ${isActive ? 'active-cta' : 'inactive-cta'}`}
                 >
                   {project.cta}
                 </a>
+
               </div>
             </div>
           );
