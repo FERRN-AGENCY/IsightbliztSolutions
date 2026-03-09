@@ -225,7 +225,9 @@
     min-height: 320px;
     padding: 20px;
   }
-
+  .tabs-menu-2{
+    width: 100%;
+  }
   /* 3. Scale down Typography */
   .text-block-10 {
     font-size: 20px; /* Smaller heading for mobile */
@@ -282,9 +284,9 @@
   }
     /* Active Tab Style from your code */
   .tab-link.w--current {
-    background-image: radial-gradient(
+    /* background-image: radial-gradient(
     50% 80% at 50% 80%, 
     rgba(95, 95, 95, 0.4) 0%, 
-    transparent 100%)
+    transparent 100%) */
    }
 }

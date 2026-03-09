@@ -84,11 +84,11 @@
 
 /* ANIMATIONS */
 .move-left {
-  animation: infinite-slide-left 30s linear infinite;
+  animation: infinite-slide-left 100s linear infinite;
 }
 
 .move-right {
-  animation: infinite-slide-right 30s linear infinite;
+  animation: infinite-slide-right 100s linear infinite;
 }
 
 @keyframes infinite-slide-left {
