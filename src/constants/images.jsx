@@ -4,6 +4,7 @@
 import add from "../assets/add.svg";
 import back from "../assets/back.svg";
 import background from "../assets/background.svg";
+import background1 from "../assets/background.jpg"
 import database from "../assets/database.svg";
 import discord from "../assets/discord.svg";
 import faqbg from "../assets/faqbg.svg";
@@ -72,11 +73,13 @@ import propellerAds from "../assets/Propeller-Ads-Logo.png";
 import semrush from "../assets/Semrush-Logo.png";
 import tensor from "../assets/Tensor-Logo-White.png";
 import yahooFinance from "../assets/Yahoo-Finance-Logo.png";
+import Vector from "../assets/Vector.svg"
 
 const images = {
   add,
   back,
   background,
+  background1,
   database,
   discord,
   faqbg,
@@ -145,6 +148,7 @@ const images = {
   semrush,
   tensor,
   yahooFinance,
+  Vector
 };
 
 export default images;

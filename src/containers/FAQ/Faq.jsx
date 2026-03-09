@@ -5,6 +5,7 @@ import FaqItem from './FaqItem';
 import Block from './Block';
 import './Faq.css';
 
+
 const Faq = () => {
   // Track which FAQ ID is open (null means all are closed)
   const [openId, setOpenId] = useState(null);

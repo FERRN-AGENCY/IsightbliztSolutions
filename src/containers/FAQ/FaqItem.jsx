@@ -8,7 +8,7 @@ const FaqItem = ({ question, answer, isOpen, onClick }) => {
         <div className="text-block-14">{question}</div>
         <img
           loading="lazy"
-          src="https://cdn.prod.website-files.com/6953b51a00729d30773ab884/6956b86852cf5684a5f4ccfd_plusarrow.svg"
+          src={images.Vector}
           alt="toggle"
           className="arrrow-xando"
           style={{

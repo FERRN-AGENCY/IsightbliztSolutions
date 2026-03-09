@@ -190,7 +190,7 @@
   .team-layout {
     gap: 20px;
   }
-  .spotlight-text h3 { font-size: 28px; }
+  .spotlight-text h3 { font-size: 20px; }
 }
 
 @media (max-width: 768px) {
@@ -226,7 +226,9 @@
     width: 100%;
     padding: 0 5%;
   }
-
+ .spotlight-content{
+  height: fit-content;
+ }
   .spotlight-frame {
     height: 400px;
     min-height: unset;
@@ -245,7 +247,9 @@
     padding: 10px 0;
     cursor: grab;
   }
-
+ .spotlight-text p{
+  margin: 0px;
+ }
   .member-wrapper {
     flex: 0 0 40%; /* Shows 2.5 cards on screen to hint at scrolling */
   }
