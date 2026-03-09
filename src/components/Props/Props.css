@@ -169,7 +169,7 @@
 }
 @media (max-width: 480px) {
     .app__props{
-        height: 72vh;
+        height: 65vh;
         margin: 0px;
     }
     .app__props-button span {
