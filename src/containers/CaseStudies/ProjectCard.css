@@ -193,17 +193,7 @@
 .card-cta:hover {
   transform: scale(0.98);
 }
-.see-more-container {
-  
-  width: 100%;
-  text-align: right;
-  margin-top: 16px;
-  margin-bottom: 20px; /* Adds breathing room before the button */
-}
-.see-more-container a{
-  text-decoration: none;
-  color: var(--white-color);
-}
+
 
 /* =========================================================
    CTA States

@@ -142,7 +142,18 @@
 .project-grid::-webkit-scrollbar {
   display: none;
 }
-
+.see-more-container {
+  width: fit-content;
+  text-align: center;
+  margin: 30px auto;
+  background-color: #0d0d0d;
+  padding: 18px 60px;
+  border-radius: 8px;
+}
+.see-more-container a{
+  text-decoration: none;
+  color: var(--white-color);
+}
 @media (max-width: 768px) {
   .project-grid {
     gap: 20px;

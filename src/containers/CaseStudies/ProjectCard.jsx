@@ -44,17 +44,7 @@ const ProjectCard = forwardRef(({ activeIndex, onScroll }, ref) => {
                   ))}
                 </div>
                 
-                {/* "See More" Link - Moved ABOVE the button */}
-                <div className="see-more-container">
-                  <a 
-                    href="https://www.notion.so/AVALANCHEXBT-2fb2efe8d2858030a7f2e8c3e28ced11" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="see-more-link"
-                  >
-                    See More
-                  </a>
-                </div>
+                
 
                 {/* Main CTA Button */}
                 <a 

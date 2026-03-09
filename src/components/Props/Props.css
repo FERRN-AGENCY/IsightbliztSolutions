@@ -168,18 +168,22 @@
     }
 }
 @media (max-width: 480px) {
-    /* .app__props{
+    .app__props{
         height: 72vh;
-    } */
+        margin: 0px;
+    }
     .app__props-button span {
         width: 0.5rem;
         height: 0.5rem;
         margin-right: 2px;
 
     }
-    #Partners, #Services, #FAQ, #CaseStudies, #Team {
-        height: 50vh;
+    #AboutUs,#Partners, #Services, #FAQ, #CaseStudies, #Team {
+        height: 40vh;
         padding-top: 5%;
+        justify-content: end;
+        margin: 0px;
+        padding: 0px;
     }
 }
 .app__props-button p{

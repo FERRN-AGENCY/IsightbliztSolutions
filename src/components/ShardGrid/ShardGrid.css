@@ -63,9 +63,9 @@
   top: 50%;
   padding: 45px;
   color: #a0a0a0;
-  font-size: 16px;
-  line-height: 1.6;
-  max-width: 480px;
+  font-size: 15px;
+  line-height: 1.4;
+  max-width: 500px;
   pointer-events: none;
 }
 
@@ -249,8 +249,8 @@
     line-height: 1.2;
     /* Force neon green color matching your screenshot */
     background: none;
-    color: #40ff00;
-    -webkit-text-fill-color: #40ff00; 
+    color: var(--white-color);
+    -webkit-text-fill-color: var(--white-color); 
   }
 
   /* Adjust the bottom CTA card */
@@ -263,7 +263,7 @@
   .shard h2 {
     width: 100%;
     font-size: 20px;
-    color: #40ff00; /* Green title matching screenshot */
+    color: var(--white-color); /* Green title matching screenshot */
   }
 
   .shard p {
@@ -274,7 +274,7 @@
   .btn {
     width: 100%;
     text-align: center;
-    background-color: #40ff00; /* Green button matching screenshot */
+    background-color: var(--white-color); /* Green button matching screenshot */
     color: #000;
     font-weight: 600;
     display: block; /* Makes it span full width */
