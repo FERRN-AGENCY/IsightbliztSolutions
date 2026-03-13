@@ -149,6 +149,7 @@
   background-color: #0d0d0d;
   padding: 18px 60px;
   border-radius: 8px;
+  cursor: pointer;
 }
 .see-more-container a{
   text-decoration: none;
