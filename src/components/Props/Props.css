@@ -95,9 +95,20 @@
         line-height: 1.6;
     }
 }
-.app__props h1 span{
-    color: var(--white-color);
+
+.app__props a{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
+
+.app__props a span{
+    color: var(--white-color);
+    background-color:  #181818;
+    width: 9px;
+    height: 9px;
+}
+
 .app__props p{
     color: var(--lightGray-color);
     width: 32rem;

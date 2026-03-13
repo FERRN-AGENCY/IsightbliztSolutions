@@ -1,62 +1,13 @@
-import React, { useRef, useEffect } from 'react'; // 1. Import useRef and useEffect
+import React from 'react'; // Removed useRef and useEffect!
 import './ShardGrid.css';
 import { images } from '../../constants';
 
 const ShardGrid = () => {
-  // 2. Create a reference to target the top-left video
-  const reverseVideoRef = useRef(null);
-
-  // 3. The OPTIMIZED Reverse Playback Logic
-  useEffect(() => {
-    const video = reverseVideoRef.current;
-    if (!video) return;
-
-    let animationFrameId;
-    let lastTimestamp = performance.now();
-    
-    // --- TWEAK THIS NUMBER ---
-    // 1.0 = Normal speed. 1.5 = 50% faster. 2.0 = Double speed.
-    const playbackSpeed = 1.5; 
-
-    const rewindLoop = (currentTimestamp) => {
-      // Calculate exactly how much time passed since the last frame
-      const deltaTime = (currentTimestamp - lastTimestamp) / 1000;
-      lastTimestamp = currentTimestamp;
-
-      if (video.currentTime <= 0.1) {
-        video.currentTime = video.duration; // Loop back to the end
-      } else {
-        // Move backward smoothly based on actual time passed
-        video.currentTime -= (deltaTime * playbackSpeed);
-      }
-      
-      animationFrameId = requestAnimationFrame(rewindLoop);
-    };
-
-    const startRewind = () => {
-      video.pause(); 
-      video.currentTime = video.duration; 
-      lastTimestamp = performance.now();
-      animationFrameId = requestAnimationFrame(rewindLoop);
-    };
-
-    if (video.readyState >= 1) {
-      startRewind();
-    } else {
-      video.addEventListener('loadedmetadata', startRewind);
-    }
-
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-      video.removeEventListener('loadedmetadata', startRewind);
-    };
-  }, []);
-  
   return (
     <div className="about-bottom">
       <div className="div-block">
         
-        {/* TOP LEFT SHARD (Now playing in reverse!) */}
+        {/* TOP LEFT SHARD (Using your perfectly reversed file) */}
         <div className="shard-wrapper top-left-block">
           <div className="svg-container">
             <img src={images.picture1} alt="" className="desktop-svg invisible-prop" />
@@ -66,12 +17,12 @@ const ShardGrid = () => {
                 maskImage: `url(${images.picture1})` 
               }}>
               <video 
-                ref={reverseVideoRef} // 4. Attach the ref here
-                src={images.Editz} 
+                src={images.Editz2} // Updated to your new reversed file
+                autoPlay 
+                loop 
                 muted 
                 playsInline 
                 className="shape-video"
-                // Note: We removed 'autoPlay' and 'loop' here because our script handles it now!
               />
               {/* Desktop dark fade overlay */}
               <div className="video-overlay"></div>
@@ -131,7 +82,8 @@ const ShardGrid = () => {
                   loop 
                   muted 
                   playsInline 
-                  className="shape-video reversed-video" /* This one is still just mirrored horizontally */
+                  /* Removed "reversed-video" so it does NOT mirror-flip anymore */
+                  className="shape-video" 
                 />
              </div>
           </div>

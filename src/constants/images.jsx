@@ -75,6 +75,7 @@ import tensor from "../assets/Tensor-Logo-White.png";
 import yahooFinance from "../assets/Yahoo-Finance-Logo.png";
 import Vector from "../assets/Vector.svg"
 import Editz from "../assets/EDITZ.mp4"
+import Editz2 from "../assets/EDITZ2.mp4"
 
 const images = {
   add,
@@ -150,7 +151,8 @@ const images = {
   tensor,
   yahooFinance,
   Vector,
-  Editz
+  Editz,
+  Editz2
 };
 
 export default images;
