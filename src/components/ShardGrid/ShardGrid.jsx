@@ -1,30 +1,77 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react'; // 1. Import useRef and useEffect
 import './ShardGrid.css';
 import { images } from '../../constants';
 
 const ShardGrid = () => {
+  // 2. Create a reference to target the top-left video
+  const reverseVideoRef = useRef(null);
+
+  // 3. The OPTIMIZED Reverse Playback Logic
+  useEffect(() => {
+    const video = reverseVideoRef.current;
+    if (!video) return;
+
+    let animationFrameId;
+    let lastTimestamp = performance.now();
+    
+    // --- TWEAK THIS NUMBER ---
+    // 1.0 = Normal speed. 1.5 = 50% faster. 2.0 = Double speed.
+    const playbackSpeed = 1.5; 
+
+    const rewindLoop = (currentTimestamp) => {
+      // Calculate exactly how much time passed since the last frame
+      const deltaTime = (currentTimestamp - lastTimestamp) / 1000;
+      lastTimestamp = currentTimestamp;
+
+      if (video.currentTime <= 0.1) {
+        video.currentTime = video.duration; // Loop back to the end
+      } else {
+        // Move backward smoothly based on actual time passed
+        video.currentTime -= (deltaTime * playbackSpeed);
+      }
+      
+      animationFrameId = requestAnimationFrame(rewindLoop);
+    };
+
+    const startRewind = () => {
+      video.pause(); 
+      video.currentTime = video.duration; 
+      lastTimestamp = performance.now();
+      animationFrameId = requestAnimationFrame(rewindLoop);
+    };
+
+    if (video.readyState >= 1) {
+      startRewind();
+    } else {
+      video.addEventListener('loadedmetadata', startRewind);
+    }
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      video.removeEventListener('loadedmetadata', startRewind);
+    };
+  }, []);
+  
   return (
     <div className="about-bottom">
       <div className="div-block">
         
-        {/* TOP LEFT SHARD (Row 2 & 3 on Mobile) */}
+        {/* TOP LEFT SHARD (Now playing in reverse!) */}
         <div className="shard-wrapper top-left-block">
           <div className="svg-container">
-            {/* 1. Invisible image props the container open on desktop */}
             <img src={images.picture1} alt="" className="desktop-svg invisible-prop" />
             
-            {/* 2. Mask Wrapper keeps the shape correctly oriented */}
             <div className="mask-wrapper" style={{ 
                 WebkitMaskImage: `url(${images.picture1})`, 
                 maskImage: `url(${images.picture1})` 
               }}>
               <video 
+                ref={reverseVideoRef} // 4. Attach the ref here
                 src={images.Editz} 
-                autoPlay 
-                loop 
                 muted 
                 playsInline 
                 className="shape-video"
+                // Note: We removed 'autoPlay' and 'loop' here because our script handles it now!
               />
               {/* Desktop dark fade overlay */}
               <div className="video-overlay"></div>
@@ -37,7 +84,7 @@ const ShardGrid = () => {
           </div>
         </div>
 
-        {/* CENTER LOGO (Row 1 Left on Mobile) */}
+        {/* CENTER LOGO */}
         <div className="shard-wrapper middle-block">
           <img 
             src={images.logoBig}
@@ -45,7 +92,7 @@ const ShardGrid = () => {
           />
         </div>
 
-        {/* TOP RIGHT SHARD (Row 1 Right on Mobile) */}
+        {/* TOP RIGHT SHARD */}
         <div className="shard-wrapper top-right-block">
             <div>
                 <img src={images.picture3} alt="" className='image desktop-svg' />
@@ -53,7 +100,7 @@ const ShardGrid = () => {
             <div className='text-content tr'>$500M+ Funds<br/>Raised</div>
         </div>
 
-        {/* BOTTOM LEFT SHARD (Row 4 on Mobile) */}
+        {/* BOTTOM LEFT SHARD */}
         <div className="shard-wrapper bottom-left-block">
             <img src={images.picture4} alt="" className="desktop-svg" />
             <div className="shard piece-4">
@@ -69,28 +116,23 @@ const ShardGrid = () => {
             </div>
         </div>
 
-        {/* BOTTOM RIGHT SHARDS (Hidden on Mobile) */}
+        {/* BOTTOM RIGHT SHARDS */}
         <div className="shard-wrapper bottom-right-block-1 desktop-only">
           <div className="svg-container">
-             {/* Invisible structural prop */}
              <img src={images.picture2} alt="" className="desktop-svg invisible-prop" />
              
-             {/* Mask Wrapper keeps the shape facing normal/right */}
              <div className="mask-wrapper" style={{ 
                 WebkitMaskImage: `url(${images.picture2})`, 
                 maskImage: `url(${images.picture2})` 
               }}>
-                {/* Only the video itself gets reversed! */}
                 <video 
                   src={images.Editz} 
                   autoPlay 
                   loop 
                   muted 
                   playsInline 
-                  className="shape-video reversed-video"
+                  className="shape-video reversed-video" /* This one is still just mirrored horizontally */
                 />
-                {/* Desktop dark fade overlay */}
-              <div className="video-overlay"></div>
              </div>
           </div>
         </div>
