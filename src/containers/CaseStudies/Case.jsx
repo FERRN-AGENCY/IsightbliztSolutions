@@ -135,8 +135,7 @@ const Case = () => {
         {/* "See More" Link - Moved ABOVE the button */}
         <div className="see-more-container">
           <a 
-            href="https://www.notion.so/AVALANCHEXBT-2fb2efe8d2858030a7f2e8c3e28ced11" 
-            target="_blank" 
+            href="https://www.notion.so/InsightBlitz-30e8d9cb188c80a4a3e3d066609b4f9b"
             rel="noopener noreferrer"
             className="see-more-link"
           >

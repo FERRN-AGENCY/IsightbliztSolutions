@@ -12,6 +12,12 @@
 .lookpage{
   height: 100vh;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+  width: -webkit-fill-available;
+}
 @media (max-width: 769px) {
   .lookpage {
     height: fit-content;

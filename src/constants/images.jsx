@@ -74,6 +74,7 @@ import semrush from "../assets/Semrush-Logo.png";
 import tensor from "../assets/Tensor-Logo-White.png";
 import yahooFinance from "../assets/Yahoo-Finance-Logo.png";
 import Vector from "../assets/Vector.svg"
+import Editz from "../assets/EDITZ.mp4"
 
 const images = {
   add,
@@ -148,7 +149,8 @@ const images = {
   semrush,
   tensor,
   yahooFinance,
-  Vector
+  Vector,
+  Editz
 };
 
 export default images;

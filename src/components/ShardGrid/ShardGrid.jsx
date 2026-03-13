@@ -1,16 +1,34 @@
 import React from 'react';
 import './ShardGrid.css';
-import {images} from '../../constants'
+import { images } from '../../constants';
 
 const ShardGrid = () => {
   return (
     <div className="about-bottom">
       <div className="div-block">
         
-        {/* TOP LEFT SHARD (Row 2 on Mobile) */}
+        {/* TOP LEFT SHARD (Row 2 & 3 on Mobile) */}
         <div className="shard-wrapper top-left-block">
           <div className="svg-container">
-            <img src={images.picture1} alt="" className="desktop-svg" />
+            {/* 1. Invisible image props the container open on desktop */}
+            <img src={images.picture1} alt="" className="desktop-svg invisible-prop" />
+            
+            {/* 2. Mask Wrapper keeps the shape correctly oriented */}
+            <div className="mask-wrapper" style={{ 
+                WebkitMaskImage: `url(${images.picture1})`, 
+                maskImage: `url(${images.picture1})` 
+              }}>
+              <video 
+                src={images.Editz} 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                className="shape-video"
+              />
+              {/* Desktop dark fade overlay */}
+              <div className="video-overlay"></div>
+            </div>
           </div>
           <div className="text-content">
             InsightBlitz is a full-stack Web3 go-to-market partner focused on one thing: execution that drives real adoption.
@@ -35,7 +53,7 @@ const ShardGrid = () => {
             <div className='text-content tr'>$500M+ Funds<br/>Raised</div>
         </div>
 
-        {/* BOTTOM LEFT SHARD (Row 3 on Mobile) */}
+        {/* BOTTOM LEFT SHARD (Row 4 on Mobile) */}
         <div className="shard-wrapper bottom-left-block">
             <img src={images.picture4} alt="" className="desktop-svg" />
             <div className="shard piece-4">
@@ -45,7 +63,7 @@ const ShardGrid = () => {
                 <p>
                     Partner with InsightBlitz Solutions and turn insight into measurable growth.
                 </p>
-                <a href="#" className="btn">
+                <a href="https://calendly.com/jeffersonmeet/30min" className="btn">
                     Work with InsightBlitz
                 </a>
             </div>
@@ -53,7 +71,28 @@ const ShardGrid = () => {
 
         {/* BOTTOM RIGHT SHARDS (Hidden on Mobile) */}
         <div className="shard-wrapper bottom-right-block-1 desktop-only">
-            <img src={images.picture2} alt="" className="desktop-svg" />
+          <div className="svg-container">
+             {/* Invisible structural prop */}
+             <img src={images.picture2} alt="" className="desktop-svg invisible-prop" />
+             
+             {/* Mask Wrapper keeps the shape facing normal/right */}
+             <div className="mask-wrapper" style={{ 
+                WebkitMaskImage: `url(${images.picture2})`, 
+                maskImage: `url(${images.picture2})` 
+              }}>
+                {/* Only the video itself gets reversed! */}
+                <video 
+                  src={images.Editz} 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline 
+                  className="shape-video reversed-video"
+                />
+                {/* Desktop dark fade overlay */}
+              <div className="video-overlay"></div>
+             </div>
+          </div>
         </div>
 
         <div className="shard-wrapper bottom-right-block-2 desktop-only">

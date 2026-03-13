@@ -21,7 +21,7 @@ const TabContent = ({ data }) => {
             <h2 className="text-block-10">{data.title}</h2>
             <p className="text-block-11">{data.description}</p>
           </div>
-          <a href="#" className="link-book">{data.cta}</a>
+          <a href="https://calendly.com/jeffersonmeet/30min" className="link-book">{data.cta}</a>
         </div>
 
         {/* Cards */}

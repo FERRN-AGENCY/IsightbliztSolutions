@@ -41,7 +41,7 @@ const Team = () => {
   return (
     <section className="team-section">
       <div className="container">
-        <Props company="Team" title="The" passage="Minds" highlightOne="Behind" highlightTwo="InsightBlitz" id="Team" />
+        <Props company="Team" title="The" passage="Minds" highlightOne="Behind" highlightTwo="Insightblitz" id="Team" />
 
         <div className="team-layout">
           <div className="team-grid-wrapper" id="team-mobile-scroll">

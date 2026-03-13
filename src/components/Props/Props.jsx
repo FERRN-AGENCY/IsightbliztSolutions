@@ -28,9 +28,11 @@ const Props = ({
 
             <p>{description}</p>
 
-            <div className="app__props-button" style={showLine ? { display: 'flex' } : { display: 'none' }}>
+            <div className="app__props-button" style={showLine ? { display: 'flex' } : { display: 'none' }}> 
+              {/* <a href="https://calendly.com/jeffersonmeet/30min"> */}
                 <span></span>
                 <p>{buttonText}</p>
+              {/* </a> */}
             </div>
         </div>
   )

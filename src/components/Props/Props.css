@@ -20,8 +20,8 @@
 @media (max-width: 769px) {
     .app__props {
         height: 69vh;
-        padding: 3rem 0;
-        justify-content: end;
+        justify-content: center;
+        margin: 0px;
 
     }
     #AboutUs{
@@ -169,8 +169,10 @@
 }
 @media (max-width: 480px) {
     .app__props{
-        height: 66vh;
+        height: 62vh;
         margin: 0px;
+        padding: 3.5rem auto;
+        justify-content: end;
     }
     .app__props-button span {
         width: 0.5rem;

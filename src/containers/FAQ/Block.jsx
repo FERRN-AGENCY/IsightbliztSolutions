@@ -25,7 +25,7 @@ const Block = ({
             <h2 className="block-10"><span>{title}</span> {word} <span>{title2}</span> {word2} <span>{title3}</span></h2>
             <p className="block-11">{description}</p>
           </div>
-          <a href="#" className="link">{cta}</a>
+          <a href="https://calendly.com/jeffersonmeet/30min" className="link">{cta}</a>
         </div>
     </div>
   )
