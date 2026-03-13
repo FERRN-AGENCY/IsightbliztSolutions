@@ -63,8 +63,10 @@
         var(--white-color),
         var(--black-color),
         transparent
-    );    
+    ); 
+
 }
+
 .app__props h1{
     font-family: 'Geist';
     font-style: normal;
@@ -94,6 +96,9 @@
         width: 90%;
         line-height: 1.6;
     }
+}
+h1 span{
+    color: var(--white-color);
 }
 
 .app__props a{
