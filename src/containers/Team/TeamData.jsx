@@ -89,4 +89,12 @@ export const teamData = [
     img: images.johnRaelli, 
     twitter: "#" 
   },
+  { 
+    id: 12, 
+    name: "Osondu Charles Michael", 
+    role: "Web Developer", 
+    abbr: "WD", 
+    img: images.osonduCharles, 
+    twitter: "#" 
+  },
 ];

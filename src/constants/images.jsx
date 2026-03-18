@@ -53,6 +53,7 @@ import johnRaelli from "../assets/John Raelli Villanueva - Social Media Marketer
 import kreezhiaSalazar from "../assets/Kreezhia Salazar - Product Manager.png";
 import kriscelPrila from "../assets/Kriscel Prila - Community Manager.png";
 import mikeLazarito from "../assets/Mike Lazarito - Community Manager.jpg";
+import osonduCharles from "../assets/Micheal_Website-Developer.jpg";
 
 // Brand Logo Assets (PNGs)
 import adroll from "../assets/Adroll-Logo.png";
@@ -130,6 +131,7 @@ const images = {
   kreezhiaSalazar,
   kriscelPrila,
   mikeLazarito,
+  osonduCharles,
 
   // Brand Logos
   adroll,
