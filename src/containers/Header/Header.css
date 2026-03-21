@@ -1,0 +1,98 @@
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Adds a subtle green glow to the left background */
+  padding: 4rem 6rem;
+  font-family: sans-serif;
+}
+
+.app__header-content {
+
+}
+
+.header-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #7a7a7a; /* Gray text */
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.text-green {
+  color: #5c8b41; /* Muted Green */
+}
+
+.header-subtitle {
+  font-size: 1rem;
+  color: #6a6a6a;
+  line-height: 1.5;
+  max-width: 450px;
+  margin-bottom: 2.5rem;
+}
+
+.header-btn {
+  background: linear-gradient(180deg, #6c9f50 0%, #4a7532 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.header-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Recreates the small circle icon inside the button */
+.btn-circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 3px solid #2a411d; /* Dark green ring */
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.app__header-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.app__header-image img {
+  width: 100%;
+  max-width: 524px;
+  height: 524px;
+  object-fit: contain;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 900px) {
+  .app__header {
+    flex-direction: column-reverse; /* This flips the order so the image is on top */
+    padding: 2rem;
+    text-align: left;
+    background: #050505; 
+  }
+  
+  .header-title {
+    font-size: 2.5rem;
+  }
+  
+  .app__header-content {
+    margin-bottom: 0; /* Removed this margin since it is now on the bottom */
+  }
+
+  .app__header-image {
+    justify-content: center;
+    margin-bottom: 3rem; /* Added margin here to push the text down */
+  }
+}

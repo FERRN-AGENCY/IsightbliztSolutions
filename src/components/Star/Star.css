@@ -45,7 +45,7 @@
   width: 70vw;
   height: 70vh;
   right: -30vw; /* Bleeds off the right edge */
-  bottom: -10vh;
+  bottom: -50vh;
   /* 19 seconds duration (Will never sync with the 14s left cloud) */
   /* animation: float-right 19s infinite ease-in-out alternate; */
 }
