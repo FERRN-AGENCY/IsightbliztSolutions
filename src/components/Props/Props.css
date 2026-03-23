@@ -9,6 +9,9 @@
     margin-bottom: 60px;
     z-index: 0;
 }
+#Header{
+    align-items: start;
+}
 #AboutUs{
     height: 50vh;
     padding-top: 0%;

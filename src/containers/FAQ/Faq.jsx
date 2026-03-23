@@ -18,8 +18,8 @@ const Faq = () => {
     <div className='Faq section'>
       <Props
         company="FAQ"
-        title="Before We"
-        passage="Together"
+        title="Before I"
+        passage="With You"
         passage2=""
         highlightOne="Work"
         highlightTwo=""

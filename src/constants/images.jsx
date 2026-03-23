@@ -54,6 +54,7 @@ import kreezhiaSalazar from "../assets/Kreezhia Salazar - Product Manager.png";
 import kriscelPrila from "../assets/Kriscel Prila - Community Manager.png";
 import mikeLazarito from "../assets/Mike Lazarito - Community Manager.jpg";
 import osonduCharles from "../assets/Micheal_Website-Developer.jpg";
+import userProf from "../assets/user-prof.svg";
 
 // Brand Logo Assets (PNGs)
 import adroll from "../assets/Adroll-Logo.png";
@@ -132,6 +133,7 @@ const images = {
   kriscelPrila,
   mikeLazarito,
   osonduCharles,
+  userProf,
 
   // Brand Logos
   adroll,
