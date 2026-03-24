@@ -49,7 +49,7 @@ function App() {
       <Partners />
       <Services />
       <Case />
-      {/* <Team /> */}
+      <Team />
       <Faq />
       <Footer />
 

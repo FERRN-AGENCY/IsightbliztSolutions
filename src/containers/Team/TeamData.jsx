@@ -4,16 +4,16 @@ export const teamData = [
   { 
     id: 1, 
     name: "Jefferson Valorozo", 
-    role: "CEO, Founder", 
-    abbr: "CEO", 
+    role: "Founder", 
+    abbr: "Founder", 
     img: images.jeffersonValorozo, 
     twitter: "#" 
   },
   { 
     id: 2, 
     name: "Ace Gabriel Dela Cuesta", 
-    role: "Head of Operations", 
-    abbr: "COO", 
+    role: "Operations Manager", 
+    abbr: "OM", 
     img: images.aceGabriel, 
     twitter: "#" 
   },

@@ -1,7 +1,5 @@
-import React from 'react';
-// Make sure your 'image' object is imported correctly based on your folder structure
-import image from '../../constants/images'; 
-import './Header.css'; 
+import React from 'react'
+import Props from '../../components/Props/Props'
 
 const Header = () => {
   return (
@@ -22,4 +20,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default Header
