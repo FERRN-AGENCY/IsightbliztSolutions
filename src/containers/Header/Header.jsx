@@ -10,7 +10,7 @@ const Header = () => {
             passage="Agency for"
             passage2="Brands"
             highlightOne="Marketing"
-            highlightTwo="Web3"
+            highlightTwo="AI"
             description="InsightBlitz Solutions is a leading Web3 marketing agency for Blockchain, NFTs and Crypto."
             buttonText="Book a Call"
             id=""
