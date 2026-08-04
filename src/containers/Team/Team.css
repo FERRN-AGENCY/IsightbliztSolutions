@@ -47,7 +47,7 @@ display: grid;
 
 .member-image-wrap {
   position: relative;
-  aspect-ratio: 1 / 1.1; /* Matches the slightly tall boxes in the image */
+  aspect-ratio: 1 / 1.2; /* Matches the slightly tall boxes in the image */
   border-radius: 16px;
   overflow: hidden;
   border: 1.5px solid #1a1a1a;

@@ -4,8 +4,6 @@ import {
   Zap,
   Settings2,
   ArrowRight,
-  Menu,
-  X,
   Stethoscope,
   Home,
   Wrench,
@@ -59,28 +57,33 @@ function Reveal({ children, delay = 0, as: Tag = "div", className = "" }) {
   );
 }
 
-function SplitHeading({ text, as: Tag = "h2", className = "" }) {
+function SplitHeading({ text, as: Tag = "h2", className = "", highlight = [], muted = [] }) {
   const [ref, inView] = useInView(0.25);
   const words = text.split(" ");
+
   return (
     <Tag ref={ref} className={className}>
-      {words.map((w, i) => (
-        <span key={i}>
-          <span className="word">
-            <span
-              className="word-inner"
-              style={{
-                transform: inView ? "translateY(0)" : "translateY(110%)",
-                transitionDelay: `${i * 35}ms`,
-              }}
-            >
-              {w}
-            </span>
+      {words.map((w, i) => {
+        let colorClass = "";
+        if (highlight.includes(w)) colorClass = "text-green";
+        else if (muted.includes(w)) colorClass = "text-muted-heading";
+
+        return (
+          <span key={i}>
+            <span className={`word ${colorClass}`}>
+              <span
+                className="word-inner"
+                style={{
+                  transform: inView ? "translateY(0)" : "translateY(110%)",
+                  transitionDelay: `${i * 35}ms`,
+                }}
+              >
+                {w}
+              </span>
+            </span>{" "}
           </span>
-          {/* This explicitly adds the space back between each word */}
-          {" "}
-        </span>
-      ))}
+        );
+      })}
     </Tag>
   );
 }
@@ -156,16 +159,8 @@ function MagneticButton({ children, className = "", ...rest }) {
   );
 }
 
-function scrollToId(e, href) {
-  e.preventDefault();
-  const target = document.querySelector(href);
-  if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-}
-
-
-
 /* ---------------------------------------------------------
-   5.3 Problem section
+   Problem section
 --------------------------------------------------------- */
 
 const PROBLEMS = [
@@ -218,7 +213,7 @@ function ProblemSection() {
 }
 
 /* ---------------------------------------------------------
-   5.4 Solution stack
+   Solution stack
 --------------------------------------------------------- */
 
 const SOLUTIONS = [
@@ -284,7 +279,7 @@ function SolutionsSection() {
 }
 
 /* ---------------------------------------------------------
-   5.5 Live demo
+   Live demo
 --------------------------------------------------------- */
 
 const MAX_ATTEMPTS = 2;
@@ -338,9 +333,7 @@ function DemoSection() {
     <section className="section demo-section" id="demo">
       <div className="demo-glow" aria-hidden="true" />
       <div className="container demo-wrap">
-        <span className="eyebrow" style={{ justifyContent: "center" }}>
-          Try it right now
-        </span>
+        <span className="eyebrow eyebrow--center">Try it right now</span>
         <SplitHeading text="Do Not Take Our Word For It. Call It." />
         <Reveal as="p" delay={80}>
           Enter your number. Our AI agent calls you in ten seconds and books
@@ -419,7 +412,7 @@ function DemoSection() {
 }
 
 /* ---------------------------------------------------------
-   5.6 How it works
+   How it works
 --------------------------------------------------------- */
 
 const STEPS = [
@@ -470,7 +463,7 @@ function ProcessSection() {
 }
 
 /* ---------------------------------------------------------
-   5.7 Industries grid
+   Industries grid
 --------------------------------------------------------- */
 
 const INDUSTRIES = [
@@ -546,7 +539,7 @@ function IndustriesSection() {
 }
 
 /* ---------------------------------------------------------
-   5.8 Results
+   Results
 --------------------------------------------------------- */
 
 const RESULTS = [
@@ -614,6 +607,7 @@ function ResultsSection() {
     </section>
   );
 }
+
 
 
 /* ---------------------------------------------------------
