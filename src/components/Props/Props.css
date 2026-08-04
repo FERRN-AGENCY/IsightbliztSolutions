@@ -20,6 +20,12 @@
     height: 45vh;
     padding-top: 0%;
 }
+.flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
 @media (max-width: 769px) {
     .app__props {
         height: 69vh;
@@ -162,8 +168,18 @@ h1 span{
     border-color 0.2s ease,
     transform 0.15s ease;
 }
+.two{
+    background-color: #0000;
+    box-shadow: none;
+    color: var(--white-color);
+    width: 15.3rem;
+}
 .app__props-button:hover{
     background-color: var(--white-color);
+    transform: translateY(-3px);
+}
+.two:hover{
+    background-color: #0000;
     transform: translateY(-3px);
 }
 .app__props-button span{
@@ -175,9 +191,12 @@ h1 span{
     margin-left: 0.5rem;
 }
 @media (max-width: 768px) {
+    .flex{
+        flex-direction: column;
+        margin-bottom: 1rem ;
+    }
 
     .app__props-button{
-        width: 10rem;
         height: 2.5rem;
         padding: 0.8rem 1rem;
     }

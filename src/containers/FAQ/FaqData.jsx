@@ -1,27 +1,32 @@
 export const faqData = [
   {
     id: 1,
-    question: "What is Insightblitz?",
-    answer: "Insightblitz is a premier Web3 growth agency specializing in GTM strategy, tokenomics, and full-stack development for high-impact crypto projects."
+    question: "Will it sound like a robot?",
+    answer: "Call the demo above and decide for yourself. Most callers do not realise. It handles interruptions, accents, and questions it was not asked directly."
   },
   {
     id: 2,
-    question: "How much does it cost?",
-    answer: "Our pricing is bespoke and based on the scope of work. We offer everything from fixed-fee advisory to performance-based growth models."
+    question: "What happens if it cannot answer something?",
+    answer: "It transfers to a human immediately or takes a message and texts your team. It never guesses."
   },
   {
     id: 3,
-    question: "What type of projects does Insightblitz work with?",
-    answer: "We work with serious Web3 teams across DeFi, Infrastructure, GameFi, and L1/L2 ecosystems that are ready to scale."
+    question: "Do I have to change my phone system?",
+    answer: "No. We forward or route to the agent. Your existing number stays exactly as it is."
   },
   {
     id: 4,
-    question: "How big is our team?",
-    answer: "We are a lean, global team of Web3 natives, engineers, and growth experts with decades of combined experience in the space."
+    question: "How long until it is live?",
+    answer: "Fourteen days from kickoff for a standard build. Complex multi location setups take longer and we tell you that upfront."
   },
   {
     id: 5,
-    question: "What makes Insightblitz different from other Web3 agencies?",
-    answer: "We are a lean, global team of Web3 natives, engineers, and growth experts with decades of combined experience in the space."
+    question: "Will this replace my staff?",
+    answer: "No. It handles the calls your team physically cannot reach. Your staff stop doing phone tag and start closing the qualified ones."
+  },
+  {
+    id: 6,
+    question: "What does it cost?",
+    answer: "A one time build fee plus a monthly management retainer. Priced against the revenue we recover, not against a software seat. Exact numbers on the call."
   }
 ];

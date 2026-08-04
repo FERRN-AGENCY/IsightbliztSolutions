@@ -4,6 +4,7 @@ import Slider from './Slider/Slider';
 import ShardGrid from './ShardGrid/ShardGrid';
 import PartnerMarquee from './PartnerMarquee/PartnerMarquee';
 import NavMenu from './NavMenu/NavMenu';
+import Landing from './Landing/Landing'
 
 export {
     Navbar,
@@ -11,6 +12,7 @@ export {
     Slider,
     ShardGrid,
     PartnerMarquee,
-    NavMenu
+    NavMenu,
+    Landing
 };
 
