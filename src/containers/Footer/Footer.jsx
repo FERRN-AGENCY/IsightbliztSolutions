@@ -1,7 +1,7 @@
-import React from 'react';
-import { images } from '../../constants';
-import { footerLinks } from './FooterData';
-import './Footer.css';
+import React from "react";
+import { images } from "../../constants";
+import { footerLinks } from "./FooterData";
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -10,16 +10,22 @@ const Footer = () => {
         {/* Top Section */}
         <div className="footer-top">
           <div className="footer-brand">
-            <img src={images.logoBig} alt="InsightBlitz" className="footer-logo" />
+            <img
+              src={images.logoBig}
+              alt="InsightBlitz"
+              className="footer-logo"
+            />
           </div>
-          
+
           <div className="footer-links-container">
             {footerLinks.map((group, index) => (
               <div key={index} className="footer-link-group">
                 <h4 className="footer-group-title">{group.title}</h4>
                 <ul className="footer-list">
                   {group.links.map((item, i) => (
-                    <li key={i}><a href={item.link}>{item.name}</a></li>
+                    <li key={i}>
+                      <a href={item.link}>{item.name}</a>
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -33,14 +39,18 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="footer-bottom">
           <div className="social-icons">
-            <a href="#"><img src={images.twitter} alt="X" /></a>
-            <a href="#"><img src={images.linkedin} alt="LinkedIn" /></a>
-            <a href="#"><img src={images.discord} alt="Discord" /></a>
+            <a href="#">
+              <img src={images.twitter} alt="X" />
+            </a>
+            <a href="#">
+              <img src={images.linkedin} alt="LinkedIn" />
+            </a>
+            <a href="#">
+              <img src={images.discord} alt="Discord" />
+            </a>
           </div>
 
-          <div className="footer-copyright">
-            © 2025 Insightblitz Solutions
-          </div>
+          <div className="footer-copyright">© 2026 Insightblitz Solutions</div>
 
           <div className="footer-legal">
             <a href="#">Terms of Service</a>
@@ -49,9 +59,7 @@ const Footer = () => {
         </div>
 
         {/* Large Background Text */}
-        <div className="footer-bg-text">
-          Insightblitz
-        </div>
+        <div className="footer-bg-text">Insightblitz</div>
       </div>
     </footer>
   );

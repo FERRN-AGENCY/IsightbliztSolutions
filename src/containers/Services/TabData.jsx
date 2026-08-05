@@ -1,52 +1,115 @@
-import { images } from '../../constants';
+import { images } from "../../constants";
 
 export const navigationData = [
-  { id: 'Tab 1', label: 'GTM' },
-  { id: 'Tab 2', label: 'Affiliates' },
-  { id: 'Tab 3', label: 'Growth Systems' },
-  { id: 'Tab 5', label: 'Development' },
+  { id: "Tab 1", label: "Voice AI" },
+  { id: "Tab 2", label: "Lead Qualification" },
+  { id: "Tab 3", label: "Booking Systems" },
+  { id: "Tab 5", label: "Integrations" },
 ];
 
 export const servicesData = {
-  'Tab 1': {
-    title: "Go-To-Market Strategy for Serious Web3 Projects",
-    description: "Everything needed to launch, scale, and win in competitive crypto markets.",
+  "Tab 1": {
+    title: "AI Systems for Serious Service Businesses",
+    description:
+      "Everything needed to answer, qualify, and book leads without adding headcount.",
     cta: "Book a Call",
     cards: [
-      { id: 1, title: "Tokenomics Strategy", text: "Design sustainable token models aligned with market realities.", icon: images.database },
-      { id: 2, title: "Exchange Listings", text: "Direct access to Tier-1 and Tier-2 exchanges for launches.", icon: images.launchpad },
-      { id: 3, title: "Market Making", text: "Ensure liquidity and stability for your token post-launch.", icon: images.partner },
-      { id: 4, title: "Venture Network", text: "Introduction to lead investors and strategic capital partners.", icon: images.people },
-      { id: 5, title: "Launchpad Access", text: "Priority onboarding for the industry's top performing launchpads.", icon: images.whitepaper },
-      { id: 6, title: "Strategic PR", text: "High-impact storytelling across major crypto and tech news outlets.", icon: images.gift },
-    ]
+      {
+        id: 1,
+        title: "AI Call Answering",
+        text: "Every call picked up in seconds, 24/7 no voicemail, no missed leads.",
+        icon: images.database,
+      },
+      {
+        id: 2,
+        title: "Natural Voice Agents",
+        text: "Human-sounding agents trained on your services, pricing, and objections.",
+        icon: images.launchpad,
+      },
+      {
+        id: 3,
+        title: "After-Hours Coverage",
+        text: "Nights, weekends, and overflow calls handled without a single missed ring.",
+        icon: images.partner,
+      },
+      {
+        id: 4,
+        title: "Call Scripts & Guardrails",
+        text: "Controlled conversations that stay on-message and escalate when needed.",
+        icon: images.people,
+      },
+      {
+        id: 5,
+        title: "Call Reporting & Insights",
+        text: "Full visibility into every call, every lead, and every booking.",
+        icon: images.whitepaper,
+      },
+      {
+        id: 6,
+        title: "Recordings & Transcripts",
+        text: "Searchable transcripts and summaries pushed to your team after each call.",
+        icon: images.gift,
+      },
+    ],
   },
-  'Tab 2': {
-    title: "Affiliate & Influencer Networks",
-    description: "Connect with the largest crypto distribution networks globally.",
-    cta: "View Network",
+  "Tab 2": {
+    title: "Qualify Every Lead Before It Reaches Your Team",
+    description:
+      "Screening and routing rules that protect your closers' calendars.",
+    cta: "Audit My Intake",
     cards: [
-      { id: 1, title: "KOL Management", text: "End-to-end management of top-tier influencers and thought leaders.", icon: images.people },
-      { id: 2, title: "Affiliate Infrastructure", text: "Custom tracking and reward systems for on-chain referral growth.", icon: images.partner },
-    ]
+      {
+        id: 1,
+        title: "Lead Qualification",
+        text: "Leads are automatically screened and routed based on your criteria.",
+        icon: images.people,
+      },
+      {
+        id: 2,
+        title: "Smart Routing",
+        text: "High-intent callers go straight to the right rep, territory, or service line.",
+        icon: images.partner,
+      },
+    ],
   },
-  'Tab 3': {
-    title: "Growth Systems & Automation",
-    description: "Data-driven systems designed to acquire and retain Web3 users.",
-    cta: "Audit My Growth",
+  "Tab 3": {
+    title: "Booked Jobs, Not Just Captured Lead",
+    description:
+      "Real-time scheduling that turns conversations into confirmed appointments.",
+    cta: "See a Booking Demo",
     cards: [
-      { id: 1, title: "CRM & Funnels", text: "Automated lead generation and conversion funnels for B2B/B2C.", icon: images.database },
-      { id: 2, title: "Retention Loops", text: "Product-led growth mechanics that keep users coming back.", icon: images.gift },
-    ]
+      {
+        id: 1,
+        title: "Appointment Booking",
+        text: "Qualified leads booked straight onto your calendar in real time.",
+        icon: images.database,
+      },
+      {
+        id: 2,
+        title: "Reminders & No-Show Recovery",
+        text: "Confirmations, reminders, and rebooking flows that protect your show rate.",
+        icon: images.gift,
+      },
+    ],
   },
-  'Tab 5': {
-    title: "Full-Stack Web3 Development",
-    description: "Bespoke engineering for dApps, smart contracts, and infrastructure.",
+  "Tab 5": {
+    title: "Plugged Into the Stack You Already Run",
+    description:
+      "Your CRM, calendar, and reporting stay the single source of truth.",
     cta: "Build with Us",
     cards: [
-      { id: 1, title: "Smart Contract Audit", text: "Security-first development and auditing for EVM and SVM chains.", icon: images.whitepaper },
-      { id: 2, title: "Custom Dashboards", text: "Real-time on-chain data visualization and analytics platforms.", icon: images.launchpad },
-      { id: 3, title: "AI Web Dev", text: "End-to-end decentralized AI application development and deployment.", icon: images.launchpad },
-    ]
-  }
+      {
+        id: 2,
+        title: "CRM & Calendar Integration",
+        text: "Plugs directly into the tools your team already uses.",
+        icon: images.launchpad,
+      },
+      {
+        id: 3,
+        title: "Workflow Automations",
+        text: "Every call, lead, and booking synced to the systems that trigger your ops.",
+        icon: images.launchpad,
+      },
+    ],
+  },
 };

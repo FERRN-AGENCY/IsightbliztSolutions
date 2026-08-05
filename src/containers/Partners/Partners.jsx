@@ -1,26 +1,24 @@
-import React from 'react'
-import Props from '../../components/Props/Props'
-import { PartnerMarquee } from '../../components'
-
+import React from "react";
+import Props from "../../components/Props/Props";
+import { PartnerMarquee } from "../../components";
 
 const Partners = () => {
   return (
-    <div className='Partners'>
-        <Props
-            company="Partners"
-            title=""
-            passage="With the"
-            passage2="Partners"
-            highlightOne="Working"
-            highlightTwo="Right"
-            description="We partner with early-stage blockchain teams to execute go-to-market systems that drive real traction."
-            buttonText=""
-            id="Partners"
-            showLine={false}
-        /> 
-        <PartnerMarquee />
+    <div className="Partners">
+      <Props
+        company="Industries"
+        title=""
+        passage="The Businesses That"
+        highlightOne="Built For"
+        highlightTwo="Need It Most"
+        description="We deploy AI systems for clinics, real estate teams, and high-ticket service businesses that can't afford to miss a lead no matter what time it comes in."
+        buttonText=""
+        id="Partners"
+        showLine={false}
+      />
+      <PartnerMarquee />
     </div>
-  )
-}
+  );
+};
 
-export default Partners
+export default Partners;
