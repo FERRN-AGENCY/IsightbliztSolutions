@@ -15,25 +15,19 @@
   max-width: 1100px;
   margin: 60px auto;
   gap: 30px;
-  align-items: start;
+  /* Change from 'stretch' to 'start' so the right side can grow taller independently */
+  align-items: start; 
   height: fit-content;
-  /* UPDATED: Dynamic viewport max-height instead of fixed 623px */
-  max-height: min(748.35px, 60.91vw);
+  max-height: 623px;
 }
 
 /* =========================================================
    Grid of Team Members (Left Side)
 ========================================================= */
 .team-grid {
-display: grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  height: 100%; /* ADDED */
-}
-
-/* ADDED: Ensures the wrapper takes full height of the layout cell  */
-.team-grid-wrapper {
-  height: 100%;
 }
 
 .member-wrapper {
@@ -97,8 +91,6 @@ display: grid;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  height: min(748.35px, 60.91vw);
-  /* max-height: 748.35px; */
   /* Removed height: 100% so it respects the frame's height */
 }
 
@@ -230,13 +222,11 @@ display: grid;
     flex-direction: column-reverse; /* Puts spotlight on top */
     width: 100%;
     margin: 30px auto;
-    max-height: fit-content;
   }
 
   .team-spotlight {
     width: 100%;
     padding: 0 5%;
-    height: fit-content; /* Allows the spotlight to adjust based on content */
   }
  .spotlight-content{
   height: fit-content;
