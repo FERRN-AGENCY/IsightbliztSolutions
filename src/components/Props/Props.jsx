@@ -3,15 +3,13 @@ import './Props.css'
 
 const Props = ({
   company,
+  title,
   highlightOne,
   highlightTwo,
-  highlightThree,
   description,
   buttonText,
-  buttonText2,
   passage,
   passage2,
-  passage3,
   id,
   showLine    
 }) => {
@@ -24,20 +22,15 @@ const Props = ({
             </div>
 
             <h1>
-                <span>{highlightOne}</span> {passage}
-                <span> {highlightTwo}</span> {passage2} <span>{highlightThree}</span> {passage3}
+                {title} <span>{highlightOne}</span> {passage}
+                <span> {highlightTwo}</span> {passage2}
             </h1>
 
             <p>{description}</p>
-          <div className='flex'>
-              <div className="app__props-button" style={showLine ? { display: 'flex' } : { display: 'none' }}> 
-                <a href="https://calendly.com/jeffersonmeet/30min" className=""><span></span>{buttonText}</a>
-              </div>
 
-              <div className="app__props-button two" style={showLine ? { display: 'flex' } : { display: 'none' }}> 
-                <a href="https://calendly.com/jeffersonmeet/30min" className=""><span></span>{buttonText2}</a>
-              </div>
-          </div>
+            <div className="app__props-button" style={showLine ? { display: 'flex' } : { display: 'none' }}> 
+              <a href="https://calendly.com/jeffersonmeet/30min" className=""><span></span>{buttonText}</a>
+            </div>
         </div>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { Navbar, Star, Slider,NavMenu, Landing } from './components';
+import { Navbar, Star, Slider,NavMenu } from './components';
 import { Header, About, Partners, Services, Faq, Case, Team, Footer } from './containers';
 
 function App() {
@@ -50,7 +50,6 @@ function App() {
       <Services />
       <Case />
       <Team />
-      <Landing />
       <Faq />
       <Footer />
 
