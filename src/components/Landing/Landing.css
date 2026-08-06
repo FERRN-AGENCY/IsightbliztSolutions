@@ -12,7 +12,7 @@
   --danger: #ff5c4d;
   --font-family: var(--font-base);
   --font-body: 'Inter', sans-serif;
-  --section-pad: clamp(44px, 9vw, 108px);
+  --section-pad: clamp(64px, 9vw, 128px);
   --container: 1180px;
   --radius: 16px;
   --radius-sm: 10px;
@@ -71,31 +71,34 @@ input, select {
   padding: var(--section-pad) 0;
 }
 
+.section-alt {
+  background: var(--bg-alt);
+}
 
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-  font-family: var(--font-family);
+  gap: 8px;
+  font-family: var(--font-display);
   font-size: .78rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 18px;
 }
 
-.eyebrow::before,
-.eyebrow::after {
+.eyebrow::before {
   content: '';
-  width: 1px;
-  height: 14px;
-  background: var(--line);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
   flex-shrink: 0;
 }
 
-.eyebrow.danger {
-  color: var(--font-muted);
+.eyebrow.danger::before {
+  background: var(--danger);
 }
 
 h1, h2, h3 {
@@ -105,41 +108,21 @@ h1, h2, h3 {
   letter-spacing: -.01em;
 }
 
-/* Every section head is centered: eyebrow, title, and intro copy all sit
-   on the same vertical axis so headers read consistently section to section. */
 .section-head {
   max-width: 760px;
-  margin: 0 auto 56px;
-  text-align: center;
+  margin-bottom: 56px;
 }
 
-/* Headline base color is grey, not white — .text-green words punch through
-   as the only bright/high-contrast color in any header. Nothing in a
-   heading should render at full --text brightness by default. */
 .section-head h1, .section-head h2 {
   font-size: clamp(2rem, 4.4vw, 3.4rem);
-  color: var(--muted);
 }
 
 .section-head p {
-  margin: 20px auto 0;
+  margin-top: 20px;
   font-size: clamp(1.02rem, 1.6vw, 1.2rem);
   color: var(--muted);
   line-height: 1.55;
   max-width: 620px;
-}
-
-/* Two-tone heading treatment: the default word color is --muted (grey),
-   a couple of words are pulled out in --green as the accent, and the
-   `text-muted-heading` class is kept for any word you want to push back
-   further for emphasis contrast. Applied per-section via the
-   `highlight` / `muted` props on SplitHeading. */
-.text-green .word-inner {
-  color: var(--green);
-}
-
-.text-muted-heading .word-inner {
-  color: var(--muted-2);
 }
 
 .word {
@@ -271,10 +254,6 @@ header.nav {
   display: none;
 }
 
-/* ---------------------------------------------------------
-   Problem section
---------------------------------------------------------- */
-
 .problem-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -298,8 +277,7 @@ header.nav {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 2.6rem;
-  color: var(--text);
-  opacity: .35;
+  color: var(--white-color);
   margin-bottom: 22px;
   line-height: 1;
 }
@@ -314,10 +292,6 @@ header.nav {
   line-height: 1.6;
   font-size: .98rem;
 }
-
-/* ---------------------------------------------------------
-   Solutions section
---------------------------------------------------------- */
 
 .solution-grid {
   display: grid;
@@ -393,10 +367,6 @@ header.nav {
   transform: translateX(3px);
 }
 
-/* ---------------------------------------------------------
-   Live demo section
---------------------------------------------------------- */
-
 .demo-section {
   position: relative;
   overflow: hidden;
@@ -424,7 +394,6 @@ header.nav {
 
 .demo-wrap h2 {
   font-size: clamp(2rem, 4.6vw, 3.2rem);
-  color: var(--muted);
 }
 
 .demo-wrap > p {
@@ -603,10 +572,6 @@ header.nav {
   text-underline-offset: 3px;
 }
 
-/* ---------------------------------------------------------
-   Process section
---------------------------------------------------------- */
-
 .process-track {
   display: flex;
   justify-content: space-between;
@@ -661,10 +626,6 @@ header.nav {
   line-height: 1.55;
 }
 
-/* ---------------------------------------------------------
-   Industries section
---------------------------------------------------------- */
-
 .industries-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -702,19 +663,12 @@ header.nav {
   line-height: 1.5;
 }
 
-/* ---------------------------------------------------------
-   Results section
---------------------------------------------------------- */
-
 .results-head-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
   gap: 24px;
-}
-
-.results-head-row .btn-outline {
-  margin-top: -8px;
+  flex-wrap: wrap;
 }
 
 .results-sample-note {
@@ -781,127 +735,6 @@ header.nav {
   padding-top: 14px;
 }
 
-/* ---------------------------------------------------------
-   Team section
---------------------------------------------------------- */
-
-.team-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 380px) 1fr;
-  gap: 22px;
-  align-items: stretch;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  align-content: start;
-}
-
-.team-thumb {
-  position: relative;
-  display: block;
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  padding: 0;
-  text-align: left;
-  transition: border-color .35s var(--ease), transform .35s var(--ease), box-shadow .35s var(--ease);
-}
-
-.team-thumb:hover {
-  transform: translateY(-3px);
-}
-
-.team-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(1) brightness(.72) contrast(1.05);
-  transition: filter .4s var(--ease);
-}
-
-.team-thumb:hover img {
-  filter: grayscale(.5) brightness(.85) contrast(1.05);
-}
-
-.team-thumb.active {
-  border-color: var(--green);
-  box-shadow: 0 0 0 1px var(--green);
-}
-
-.team-thumb.active img {
-  filter: grayscale(0) brightness(1) contrast(1);
-}
-
-.team-badge {
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  font-family: var(--font-display);
-  font-size: .7rem;
-  font-weight: 600;
-  letter-spacing: .02em;
-  padding: 5px 11px;
-  border-radius: 999px;
-  background: rgba(10, 13, 11, .72);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  color: var(--text);
-}
-
-.team-preview {
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  min-height: 320px;
-}
-
-.team-preview img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  animation: team-preview-fade .5s var(--ease);
-}
-
-@keyframes team-preview-fade {
-  from { opacity: 0; transform: scale(1.03); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-.team-preview-info {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 26px 28px;
-  background: linear-gradient(180deg, transparent, rgba(6, 9, 7, .88) 75%);
-}
-
-.team-preview-name {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.4rem;
-}
-
-.team-preview-role {
-  color: var(--green);
-  font-size: .92rem;
-  font-weight: 600;
-  margin-top: 4px;
-}
-
-/* ---------------------------------------------------------
-   Footer
---------------------------------------------------------- */
-
 footer {
   border-top: 1px solid var(--line);
   padding: 48px 0;
@@ -920,10 +753,6 @@ footer {
   font-size: .85rem;
 }
 
-/* ---------------------------------------------------------
-   Responsive
---------------------------------------------------------- */
-
 @media(max-width: 1023px) {
   .problem-grid, .solution-grid {
     grid-template-columns: 1fr 1fr;
@@ -933,12 +762,6 @@ footer {
   }
   .results-grid {
     grid-template-columns: 1fr 1fr;
-  }
-  .team-layout {
-    grid-template-columns: 1fr;
-  }
-  .team-preview {
-    min-height: 260px;
   }
   .nav-links {
     display: none;
@@ -988,13 +811,13 @@ footer {
   .nav-cta .btn-outline {
     display: none;
   }
-  .team-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .results-head-row {
+    align-items: flex-start;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal, .word-inner, .problem-card, .solution-card, .industry-tile, .team-thumb {
+  .reveal, .word-inner, .problem-card, .solution-card, .industry-tile {
     transition: none !important;
   }
   .reveal {
@@ -1005,9 +828,6 @@ footer {
     transform: none !important;
   }
   .ring-ui::before, .ring-ui::after, .waveform span {
-    animation: none !important;
-  }
-  .team-preview img {
     animation: none !important;
   }
 }
