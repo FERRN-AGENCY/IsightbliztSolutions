@@ -1,8 +1,8 @@
-.app__slider{
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto ;
-    width: fit-content;
+.app__slider {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: fit-content;
 }
 @media (max-width: 670px) {
   .app__slider {
@@ -39,21 +39,18 @@
   border-radius: 0.625rem;
   z-index: 0;
   margin: 0 1rem;
+  text-align: center;
 }
 
 /* Circular gradient glow */
 .stat-card::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 18rem;
   height: 18rem;
   border-radius: 50%;
 
-  background: radial-gradient(
-    circle,
-    var(--gray-color) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(circle, var(--gray-color) 0%, transparent 70%);
 
   top: 40%;
   left: 15%;
@@ -80,10 +77,10 @@
   }
   .stat-card::before {
     top: 10%;
-    left: 5%; 
+    left: 5%;
     width: 15rem;
-    height: 15rem; 
-    }
+    height: 15rem;
+  }
 }
 @media (max-width: 856px) {
   .stat-card {
@@ -117,35 +114,34 @@
   background-clip: text;
   font-variant-numeric: tabular-nums;
 }
-@media (max-width:1025px) {
+@media (max-width: 1025px) {
   .stat-card h2 {
     font-size: 2rem;
-  }  
+  }
 }
-@media (max-width:426px) {
+@media (max-width: 426px) {
   .stat-card h2 {
     font-size: 1.5rem;
   }
-    
 }
-.stat-card p{
-    font-weight: 400;
-    font-size: 24px;
-    color: #3F6E3B;
-    font-weight: 500;
+.stat-card p {
+  font-weight: 400;
+  font-size: 24px;
+  color: #3f6e3b;
+  font-weight: 500;
 }
-@media (max-width:1025px) {
+@media (max-width: 1025px) {
   .stat-card p {
     font-size: 1rem;
-  }  
+  }
 }
-@media (max-width:769px) {
+@media (max-width: 769px) {
   .stat-card p {
     font-size: 1rem;
-  }  
+  }
 }
-@media (max-width:426px) {
+@media (max-width: 426px) {
   .stat-card p {
     font-size: 1rem;
-  }  
+  }
 }

@@ -1,23 +1,23 @@
-import React from 'react'
-import Props from '../../components/Props/Props'
+import React from "react";
+import Props from "../../components/Props/Props";
 
 const Header = () => {
   return (
-    <div className='app__header'>
-       <Props
-            company="Insightblitz Solutions"
-            title="The Go-To"
-            passage="Agency for"
-            passage2="Brands"
-            highlightOne="Marketing"
-            highlightTwo="AI"
-            description="InsightBlitz Solutions is a leading Web3 marketing agency for Blockchain, NFTs and Crypto."
-            buttonText="Book a Call"
-            id=""
-            showLine={true}
-        />
+    <div className="app__header">
+      <Props
+        company="Insightblitz Solutions"
+        title=""
+        passage="Behind Web3's"
+        passage2=""
+        highlightOne="The KOL Engine"
+        highlightTwo="Biggest Launches"
+        description="Insightblitz helps blockchain, NFT, and crypto projects grow through trusted KOLs, Alpha Groups, and influencer campaigns that create real market attention."
+        buttonText="Book a Call"
+        id=""
+        showLine={true}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
