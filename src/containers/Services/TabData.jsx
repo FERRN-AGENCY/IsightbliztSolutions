@@ -46,7 +46,6 @@ export const servicesData = {
     cards: [
       { id: 1, title: "Smart Contract Audit", text: "Security-first development and auditing for EVM and SVM chains.", icon: images.whitepaper },
       { id: 2, title: "Custom Dashboards", text: "Real-time on-chain data visualization and analytics platforms.", icon: images.launchpad },
-      { id: 3, title: "AI Web Dev", text: "End-to-end decentralized AI application development and deployment.", icon: images.launchpad },
     ]
   }
 };
