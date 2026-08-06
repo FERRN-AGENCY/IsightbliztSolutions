@@ -1,16 +1,7 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-import { Navbar, Star, Slider, NavMenu, Landing } from "./components";
-import {
-  Header,
-  About,
-  Partners,
-  Services,
-  Faq,
-  // Case,
-  Team,
-  Footer,
-} from "./containers";
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import { Navbar, Star, Slider,NavMenu, Landing } from './components';
+import { Header, About, Partners, Services, Faq, Case, Team, Footer } from './containers';
 
 function App() {
   const [isVisible, setIsVisible] = useState(true);
@@ -18,14 +9,13 @@ function App() {
   const [toggle, setToggle] = useState(false);
 
   const navItems = [
-    { label: "About Us", className: "" },
-    { label: "Services", className: "" },
-    { label: "Solutions", className: "" },
-    // { label: 'Case Studies', className: '' },
-    { label: "Team", className: "" },
-    { label: "FAQ", className: "" },
-    { label: "Blog", className: "" },
-    { label: "Contact Us", className: "app__navbar-menu-button" },
+    { label: 'About Us', className: '' },
+    { label: 'Services', className: '' },
+    { label: 'Case Studies', className: '' },
+    { label: 'Team', className: '' },
+    { label: 'FAQ', className: '' },
+    { label: 'Blog', className: '' },
+    { label: 'Contact Us', className: 'app__navbar-menu-button' },
   ];
 
   useEffect(() => {
@@ -42,14 +32,14 @@ function App() {
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", controlNavbar);
-    return () => window.removeEventListener("scroll", controlNavbar);
+    window.addEventListener('scroll', controlNavbar);
+    return () => window.removeEventListener('scroll', controlNavbar);
   }, [lastScrollY]);
 
   return (
     <div className="App">
       <Star />
-      <div className="lookpage">
+      <div className='lookpage'>
         {/* Pass isVisible to Navbar */}
         <Navbar setToggle={setToggle} isVisible={isVisible} />
         <Header />
@@ -58,9 +48,9 @@ function App() {
       <About />
       <Partners />
       <Services />
-      {/* <Case /> */}
-      <Landing />
+      <Case />
       <Team />
+      <Landing />
       <Faq />
       <Footer />
 

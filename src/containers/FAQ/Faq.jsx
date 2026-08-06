@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { faqData } from "./FaqData";
-import Props from "../../components/Props/Props";
-import FaqItem from "./FaqItem";
-import Block from "./Block";
-import "./Faq.css";
+import React, { useState } from 'react';
+import { faqData } from './FaqData';
+import Props from '../../components/Props/Props';
+import FaqItem from './FaqItem';
+import Block from './Block';
+import './Faq.css';
+
 
 const Faq = () => {
   // Track which FAQ ID is open (null means all are closed)
@@ -14,7 +15,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="Faq section">
+    <div className='Faq section'>
       <Props
         company="FAQ"
         title="Before I"
@@ -42,11 +43,13 @@ const Faq = () => {
         </div>
       </div>
       <Block
-        title="Find Out Exactly"
-        title3="Are Costing You."
-        word="What Your Missed Calls"
-        description="Free audit. Fifteen minutes. You get the number whether you work with us or not."
-        cta="Book a Call"
+      title='Ready'
+      title3='Traction?'
+      word='to'
+      word2='real'
+      title2='Build'
+      description="We partner with focused Web3 teams to design and execute go-to-market systems that drive measurable adoption."
+      cta = "Book a Call"
       />
     </div>
   );
