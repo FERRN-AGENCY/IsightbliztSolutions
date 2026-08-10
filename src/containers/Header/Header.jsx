@@ -7,11 +7,11 @@ const Header = () => {
       <Props
         company="Insightblitz Solutions"
         title=""
-        passage="Behind Web3's"
+        highlightOne="We Turn "
+        passage="Web3 Projects Into Market Leaders Through"
+        highlightTwo="  GTM + KOL Growth"
         passage2=""
-        highlightOne="The KOL Engine"
-        highlightTwo="Biggest Launches"
-        description="Insightblitz helps blockchain, NFT, and crypto projects grow through trusted KOLs, Alpha Groups, and influencer campaigns that create real market attention."
+        description="Insightblitz helps Web3 teams go from strategy to market through execution-led GTM, KOL campaigns, partnerships, and community growth."
         buttonText="Book a Call"
         id=""
         showLine={true}

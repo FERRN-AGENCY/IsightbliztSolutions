@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Slider = () => {
   const stats = [
-    { number: 200, suffix: "+", title: "Vetted KOLs in Network", prefix: "" },
+    { number: 200, suffix: "+", title: "Projects Launched", prefix: "" },
     { number: 500, suffix: "M+", title: "Total Funds Raised", prefix: "$" },
     { number: 100, suffix: "M+", title: "Total Followers", prefix: "" },
   ];

@@ -35,14 +35,14 @@ const ShardGrid = () => {
             </div>
           </div>
           <div className="text-content">
-            At Insightblitz, KOL is the strategy. We believe trust drives growth
-            in crypto, and trust spreads through people. Every campaign is built
-            around trusted KOLs.
+            InsightBlitz Solutions is a Web3 growth partner specializing in
+            go-to-market execution and KOL-led distribution. We work with Web3
+            brands to turn strong products into market traction.
             <br />
             <br />
-            We work with early-stage blockchain, crypto, and Web3 teams that are
-            done with hype and ready for momentum that lasts. Every KOL in our
-            network is vetted for real audience engagement, not follower count.
+            From launch strategy to KOL activation and campaign execution, we
+            build the systems that move projects from launching to gaining
+            attention, users, and momentum.
           </div>
         </div>
 
@@ -67,7 +67,7 @@ const ShardGrid = () => {
         <div className="shard-wrapper bottom-left-block">
           <img src={images.picture4} alt="" className="desktop-svg" />
           <div className="shard piece-4">
-            <h2>Ready to launch with 500+ KOLs?</h2>
+            <h2>Built for GTM. Connected for Distribution.</h2>
             <p>
               Partner with Insightblitz Solutions and turn insight into
               measurable growth.
