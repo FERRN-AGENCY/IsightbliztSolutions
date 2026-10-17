@@ -26,7 +26,7 @@ const Navbar = ({ isVisible, setToggle }) => {
         ))}
       </ul>
 
-      <div className='app__navbar-button'><span>Contact Us</span></div>
+      <div className='app__navbar-button'><a href="https://calendly.com/jeffersonmeet/30min" className='app__navbar-button'><span>Contact Us</span></a></div>
 
       <div className="app__navbar-menu">
         {/* We trigger the setToggle passed from App.jsx */}

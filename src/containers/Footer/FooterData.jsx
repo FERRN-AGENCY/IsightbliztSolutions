@@ -14,7 +14,7 @@ export const footerLinks = [
     links: [
       { name: "Careers", link: "#" },
       { name: "About Us", link: "#" },
-      { name: "Contact", link: "#" },
+      { name: "Contact", link: "https://calendly.com/jeffersonmeet/30min" },
     ],
   },
 ];
