@@ -1,37 +1,37 @@
 import { images } from '../../constants';
 
 export const teamData = [
-  { 
-    id: 1, 
-    name: "Jefferson Valorozo", 
-    role: "Founder", 
-    abbr: "Founder", 
-    img: images.jeffersonValorozo, 
-    twitter: "#" 
+  {
+    id: 1,
+    name: "Evan Stanfield",
+    role: "Co-Founder - Head of Web3 & AI - Advisory",
+    abbr: "Co-Founder",
+    img: images.evanStanfield,
+    twitter: "#"
   },
-  { 
-    id: 2, 
-    name: "Ace Gabriel Dela Cuesta", 
+  {
+    id: 2,
+    name: "Jefferson Valorozo",
+    role: "Co-Founder - Head of Business Development - Marketing & Sales",
+    abbr: "Co-Founder",
+    img: images.jeffersonValorozo,
+    twitter: "#"
+  },
+  {
+    id: 3,
+    name: "Ace Gabriel Dela Cuesta",
     role: "Operations Manager", 
     abbr: "OM", 
     img: images.aceGabriel, 
     twitter: "#" 
   },
-  { 
-    id: 3, 
-    name: "Abraham Aguilar", 
-    role: "Head of Spaces", 
-    abbr: "Head of Spaces", 
-    img: images.abrahamAguilar, 
-    twitter: "#" 
-  },
-  { 
-    id: 4, 
-    name: "Evan Stanfield", 
-    role: "Head of Web3 - Advisory", 
-    abbr: "Advisory", 
-    img: images.evanStanfield, 
-    twitter: "#" 
+  {
+    id: 4,
+    name: "Abraham Aguilar",
+    role: "Head of Spaces",
+    abbr: "Head of Spaces",
+    img: images.abrahamAguilar,
+    twitter: "#"
   },
   { 
     id: 5, 
