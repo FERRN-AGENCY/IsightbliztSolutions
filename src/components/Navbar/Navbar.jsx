@@ -19,7 +19,7 @@ const Navbar = ({ isVisible, setToggle }) => {
       </div>
 
       <ul className='app__navbar-links'>
-        {['About Us', 'Services', 'Case Studies', 'Team', 'FAQ', 'Blog'].map((item) => (
+        {['About Us', 'Services', 'Case Studies', 'Team', 'FAQ'].map((item) => (
           <li className='app__flex p-text' key={`link-${item}`}>
             <a href={`#${item.replace(/\s+/g, '')}`}>{item}</a>
           </li>

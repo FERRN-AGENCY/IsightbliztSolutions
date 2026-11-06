@@ -14,7 +14,6 @@ function App() {
     { label: 'Case Studies', className: '' },
     { label: 'Team', className: '' },
     { label: 'FAQ', className: '' },
-    { label: 'Blog', className: '' },
     { label: 'Contact Us', className: 'app__navbar-menu-button' },
   ];
 
