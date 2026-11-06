@@ -39,13 +39,13 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="footer-bottom">
           <div className="social-icons">
-            <a href="#">
+            <a href="https://x.com/insightblitz_io" target="_blank" rel="noreferrer" aria-label="Insightblitz on X">
               <img src={images.twitter} alt="X" />
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/company/insightblitz-solutions/" target="_blank" rel="noreferrer" aria-label="Insightblitz on LinkedIn">
               <img src={images.linkedin} alt="LinkedIn" />
             </a>
-            <a href="#">
+            <a href="https://discord.gg/UXqzEwcpKF" target="_blank" rel="noreferrer" aria-label="Insightblitz on Discord">
               <img src={images.discord} alt="Discord" />
             </a>
           </div>

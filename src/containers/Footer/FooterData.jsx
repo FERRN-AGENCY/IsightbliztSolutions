@@ -4,7 +4,6 @@ export const footerLinks = [
     links: [
       { name: "Technology", link: "#" },
       { name: "Research", link: "#" },
-      { name: "Blog", link: "#" },
       { name: "FAQs", link: "#" },
       { name: "Podcast", link: "#" },
     ],
